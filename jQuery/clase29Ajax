@@ -1,0 +1,9 @@
+XMLHttpRequest - AJAX
+
+Petición Servidor - Asincronica.
+
+ Ejemplo de un calbas.
+
+var respuesta;
+$.get('pagina.php', function(resp){ respuesta = resp;});
+console.log(respuesta); /// nos devolveria indefinido.

@@ -1,0 +1,34 @@
+ul li{
+	color: blue;
+	font-size: 50px;
+	font-weight:bold;
+	list-style-type: none;
+}
+
+.prueba{
+	background-color: red;
+    height:200px;
+    transform:rotate(20deg);
+   /*-webkit-transform:rotate(20deg);
+    -ms-transform:rotate(20deg);*/
+    width:200px;
+}
+
+ul li:before{
+    content: url(html5_logo.png);
+}
+
+ul li:after{
+	content: url(html5_logo.png);
+}
+
+p:first-letter{
+	color:red;
+	font-size: 36px;
+    font-weight:bold;
+}
+
+p:first-line{
+	color: olive;
+	text-decoration: underline;
+}

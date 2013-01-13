@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+     <title>funciones y eventos</title>
+  </head>
+    <body>
+	     <button id="miBoton">Has clik !</button>
+	   <script type="text/javascript">
+	         window.addEventListener("load",function(){
+				 alert('La pagina se a cargado.');
+			});
+			
+			var boton = document.getElementById("miBoton");
+			window.addEventListener("keydown",tecla_presionada);
+			boton.addEventListener("click",boton_click);
+			function boton_click(evento){
+			    alert("Bienvenido a mi codigo...");
+				alert(evento.screenX);
+			}
+			function tecla_presionada(evento){
+			   alert(evento.keyCode);
+			}
+	   </script>
+	</body>
+</html>

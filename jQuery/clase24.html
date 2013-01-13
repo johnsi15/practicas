@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <title> Efectos </title>
+       <meta charset="utf-8">
+       <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+       <script>
+           $(document).on('ready',function(){
+               var elem= $('#caja');
+               $('#btn1').click(function(){
+                  //mostrar elemento.
+                  //elem.show();
+                 // elem.slideDown();
+                  /// elem.fadeIn();
+                  elem.fadeIn(600);//el tiempo va en ms.
+               });
+
+               $('#btn2').click(function(){
+                  //ocultar elemento
+                  //elem.hide();
+                  //elem.slideUp();
+                  // elem.fadeOut();
+                  elem.fadeOut(200);
+               });
+           });
+       </script>
+       <style>
+            #caja{
+              background: rgba(56,56,56,0.8);
+              display: block;
+              height: 80px;
+              margin: 5% auto;
+              width: 400px;
+            }
+       </style>
+    </head>
+     <body>
+        <div id='caja'></div>
+        <button id='btn1'>Mostrar</button>
+        <button id='btn2'>Ocular</button>
+     </body>
+</html>

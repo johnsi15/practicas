@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title> Eventos en javascript </title>
+	   <meta charset="utf-8"/>
+	   <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	   <script>
+	         $(document).on('ready',function(){
+			  /* var almacen = $('#parrafo').html();
+			     alert(almacen);*/
+				 
+				 //este metodo sirve para OBTENER el id
+				 var clase = $("#prueba").attr("id");
+				 alert(clase);
+				 
+				 //este metodo ASIGNA un valor
+				 $("#prueba").attr("class","ejemplo");
+			 });
+	   </script>
+   </head>
+    <body>
+	    <p id="parrafo"><strong>Hola jQuery</strong></p>
+		<div id="prueba"> </div>
+	</body>
+</html>

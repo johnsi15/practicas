@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <title> metodo GET</title>
+       <meta charset="utf-8">
+       <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+       <script>
+           $(document).on('ready',function(){
+            /*Traer datos normal de otro documento sin ser destructivos no mas para mostrar.
+               $.get('clase31Hola.html',function(data){
+                  $('#receptor').html(data);
+               });
+             */
+
+             //ahora traeremos datos del servidor.
+             $.get('hola.php',{nombre: "John Andrey"},function(data){
+                 $('#receptor').html(data);
+             });
+           });
+       </script>
+    </head>
+     <body>
+        <div id='receptor'></div>
+     </body>
+</html>

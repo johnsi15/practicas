@@ -1,0 +1,21 @@
+/* CSS Document */
+h1,h2{
+  color:#F00;
+  text-decoration:underline;
+}
+
+p{
+  color:#00F;	
+}
+
+.aprendiz{
+   color:#FF0;	
+}
+
+#piedepagina{
+	color:#000;
+}
+
+nav ul li{
+   color:#0F0;	
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <title> Metodos Utilitarios</title>
+       <meta charset="utf-8">
+       <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+       <script>
+           $(document).on('ready',function(){
+               $('button').on('click',function(){
+                    var s="    hola    mundoo    ";
+                    console.log(s);
+                    console.log($.trim(s));
+                /*
+                   var arreglo = ['uno','dos','tres']
+                    if ($.inArray('dos',arreglo)!== -1) {
+                          console.log(arreglo[$.inArray('dos',arreglo)]);
+                    }
+                    */
+                 /*  $.each(arreglo,function(index,valor){
+                       if(arreglo[index]=='tres'){
+                             return true;
+                       }
+                       console.log("Elemento "+ index+ " vale "+valor);
+                   });*/
+               });
+           });
+       </script>
+       <style>
+          body{
+            background: black;
+            color: blue;
+          }
+          header{
+            display: block;
+            margin: 0 auto 50px auto;
+            width: 380px;
+          }
+          div{
+            width: 300px;
+          }
+          #e1{
+            background: white;
+            display: block;
+            height: 100px;
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 300px;
+          }
+          #test{
+            display: block;
+            height: 50px;
+            margin: 0 auto;
+            width: 100px;
+          }
+       </style>
+    </head>
+     <body>
+         <header>
+             <img src="naruto.jpg"/>
+         </header>
+         <button id='test'>Ejecutar</button>
+         <div id='e1'>
+            Metodos Utilitarios
+         </div>
+     </body>
+</html>

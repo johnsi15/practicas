@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <title> Peticion con el metodo ajax</title>
+       <meta charset="utf-8">
+       <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+       <script src="js/spin.js"></script>
+       <script>
+           $(document).on('ready',function(){
+              var pet = $('#main form').attr('action');
+              var met = $('#main form').attr('method');
+              //esta es otra forma de mandar los datos del formulario manualmente
+              //var nom,m,msj; manuealmente
+              
+              $('#main form').on('submit',function(e){
+                      e.preventDefault();//evitamos que se envie nuestro formularioo
+                    $.ajax({
+                       beforeSend: function(){
+                          // $('#status').spin({radius:3,width:2,height:2,length:4});
+                           //manualmente acordarse,
+                          /* nom = document.fo.nombre.value;
+                           m = document.fo.mail.value;
+                           msj = document.fo.mensaje.value; Manuelamente */ 
+                       },
+                       url: pet,
+                       type: met,
+                       data: $('#main form').serialize(),
+                     // data: {nombre:nom,mail:m,mensaje:msj}, Manuelamente
+                      success: function(resp){
+                        if(resp == "Correcto"){
+                             $('#status').html('<img src="ok.png"/>');
+                             console.log(resp);
+                        }else{
+                             $('#status').html('<img src="x.png"/>');
+                             console.log(resp);
+                        } 
+                      },
+                      error: function(jqXHR,estado,error){
+                           $('#status').html('<img src="x.png"/>');
+                           console.log(estado);
+                           console.log(error);
+                      },
+                      complete: function(jqXHR,estado){
+                           console.log(estado);
+                      },
+                      timeout: 10000/// 10 segundos.
+                  });
+              });
+                
+           });
+         
+       </script>
+       <style>
+            *{margin:0;padding:0;}
+            body{
+              background: white;
+              color: black;
+              font-family: Myriad Pro,Arial;
+            }
+            form{
+              display: block;
+              width: 300px;
+            }
+            input[type=submit]{
+                cursor: pointer;
+                display: inline-block;
+                height: 25px;
+                vertical-align: middle;
+                width: 80%;
+            }
+            input,textarea{
+              font-family: Myriad Pro, Arial;
+              color: #FFF;
+              border: 0;
+              outline: 0;
+              background: black;
+              border-radius: 1px;
+              font-size: 16px;
+              margin:10px auto;
+              width: 95%;
+              display: block;
+              max-height: 100px;
+            }
+            textarea{
+              max-width: 95%;
+              height: 100px;
+            }
+            #main{
+              display: block;
+              margin: 0 auto;
+              width: 400px;
+            }
+            #status{
+              display: inline-block;
+              vertical-align: middle;
+            }
+            #status img{
+              width: 20px;
+              height: 20px;
+            }
+            ::selection{
+              background: black;
+              color: white;
+            }
+       </style>
+    </head>
+     <body>
+        <div id='main'>
+           <h1>Formulario de Contacto</h1>
+           <form action='peticion.php' name='fo' method='POST'>
+               <input type='text' name='nombre' placeholder='Nombre' required />
+               <input type='email' name='mail' placeholder='Correo Electronico' required />
+               <textarea name='mensaje' placeholder='Mensaje' required></textarea>
+               <div style='display:block; width:60%; margin:0 auto'>
+                   <input type='submit' name='send' value='Enviar'/>
+                   <div id='status'></div>
+               </div>
+           </form>
+        </div>
+     </body>
+</html>

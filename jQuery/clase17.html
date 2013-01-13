@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <title> Recorrer el documento</title>
+       <meta charset="utf-8">
+       <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+       <script>
+           $(document).on('ready',function(){
+               // console.log($('#primero').next().text());
+              // console.log($('#test').parent().text());
+             // console.log($('#padre').children().attr('id'));
+              $('ul li').each(function(index,elemento){
+                 console.log("El numero "+index+" contiene este texto: "+ $(elemento).text());
+              });
+             console.log($("#primero").siblings());
+           });
+       </script>
+    </head>
+     <body>
+          <div>
+             <article id='padre'>
+                   Hey!! :D
+                   <div id='test'>Soy el hijo</div>
+             </article>
+          </div>
+          <ul>
+              <li id='primero'>soy el primero</li>
+              <li>soy el que sigue...</li>
+              <li>soy el tercero</li>
+          </ul>
+     </body>
+</html>

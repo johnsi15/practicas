@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <title> introduccion a eventos </title>
+       <meta charset="utf-8">
+       <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+       <script>
+           $(document).on('ready',function(){
+                 $('a').on('click',function(){
+                      console.log($(this).attr('id'));
+                 });
+           });
+       </script>
+    </head>
+     <body>
+        <a href='http://www.google.com' id='evento'>Hello</a>
+        <a href='http://www.google.com' id='eventoTwo'>Hello two</a>
+     </body>
+</html>

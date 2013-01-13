@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <title> vincular y desvincular eventos </title>
+       <meta charset="utf-8">
+       <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+       <script>
+           var cajabg,v=0;
+           $(document).on('ready',function(){
+             //forma normal 
+             /*  $('#caja1').mouseover(function(){
+                   cajabg=$(this).css('background');
+                  $(this).css('background','red');
+               });
+
+               $('#caja1').mouseout(function(){
+                   $(this).css('background',cajabg);
+               });*/
+
+           //con on pero haciendo dos selecciones de la misma forma anterior
+               /*$('#caja1').on('mouseover',function(){
+                  cajabg=$(this).css('background');
+                  $(this).css('background','red');
+               });
+
+               $('#caja1').on('mouseout',function(){
+                  $(this).css('background',cajabg);
+               });*/
+           //con JSON haciendo una seleccion del objeto
+            /*  $('#caja1').on({
+                       'mouseover':function(){
+                          v++;
+                          cajabg=$(this).css('background');
+                          $(this).css('background','blue');
+                       }, 
+                       'mouseout':function(){
+                          $(this).css('background',cajabg);
+
+                          if(v >=3){
+                            $('#caja1').off('mouseover');
+                          }
+                            
+                       }
+              });
+              $('#caja1').on('mouseover',function(){
+                console.log("Pasaste el cursor");
+              });*/
+              ///metodo ONE...
+              $('#caja1').one('mouseover',function(){
+                  cajabg=$(this).css('background');
+                  $(this).css('background','red');
+               });
+
+               $('#caja1').on('mouseout',function(){
+                  $(this).css('background',cajabg);
+               });
+           });
+       </script>
+       <style>
+         div{
+          background-color: black;
+          display: block;
+          margin: auto;
+          margin-top: 200px;
+          height: 200px;
+          width: 200px;
+         }
+       </style>
+    </head>
+     <body>
+        <div id='caja1'></div>
+     </body>
+</html>

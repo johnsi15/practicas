@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='es'>
+   <head>
+      <title> Attr</title>
+      
+      <meta charset='utf-8'/>
+      <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+      <script>
+      /*
+        Attr nos permite obtener el valor de un atributo o removerlo
+      */
+         $(document).on("ready",function(){
+         	 // $('#prueba').attr('class','cambie La clase');
+         	 // $('#prueba').removeAttr('class');
+         	/* $('#prueba').attr('class',function(){
+                  var cadena='Hola_mundo';
+                  return cadena;
+         	 });
+              var clase = $('#prueba').attr('class');
+              alert(clase); */
+              $('a').on("click", function(e){
+                    e.preventDefault();
+                    var link = $(this).attr('href');
+                    alert("Usted esta saliendo de nuestro sitio");
+                    location.href = link;
+              });
+         });
+      </script>
+   </head>
+     <body>
+          <div id="prueba" class='pruebaclass'> </div>
+          <a href="http://www.google.com.co">Google</a>
+     </body>
+</html>

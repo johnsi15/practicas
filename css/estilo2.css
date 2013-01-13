@@ -1,0 +1,37 @@
+a{
+	color: black;
+	text-decoration: none;
+}
+
+a:link{
+   color: red;
+}
+
+a:visited{
+   color: blue;
+}
+
+a:hover{
+   background-color: #CCC;
+}
+
+input:focus{
+	background-color:#000;
+	color:#FFF;
+}
+
+input:hover{
+	background-color: red;
+}
+
+ul li:first-child{
+   background-color: #090;
+}
+
+ul li:last-child{
+   color: red;
+}
+
+ul li:nth-last-child(2){
+   color: yellow;
+}

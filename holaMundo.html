@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+      <title>Jquery: </title>
+      <meta charset="uff-8">
+		
+  </head>
+  <body>
+		<button id='miBoton'>Haz click sobre mi</button>
+		<script type="text/javascript">
+		  /*   var nombre = 'John Andrey';
+			 var edad= 19;
+			 alert('Hola '+nombre);
+			 if(edad>18)
+				alert('eres mayor de edad');
+			else
+				if(edad<18)
+				  alert('eres menor de edad');
+				  
+				  */
+			/*	function factorial(num){
+				   var fact = 1;
+				   for(num;num>0;num--)
+					   fact=fact*num;
+					   return fact;
+				}
+				alert('El factorial de 3 es: '+factorial(3)+' bien ');
+				*/
+				
+			window.addEventListener("load",function(){
+				 alert('La pagina se a cargado.');
+			});
+			
+			var boton = document.getElementById("miBoton");
+			window.addEventListener("keydown",tecla_presionada);
+			boton.addEventListener("click",boton_click);
+			function boton_click(evento){
+			    alert("Bienvenido a mi codigo...");
+				alert(evento.screenX);
+			}
+			function tecla_presionada(evento){
+			   alert(evento.keyCode);
+			}
+		</script>
+  </body>
+</html>

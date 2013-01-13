@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+       <title> crear copiar y remover elemento</title>
+       <meta charset="utf-8">
+       <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+       <script>
+           $(document).on('ready',function(){
+                $('button').on('click',function(){
+                   //  $('ol li:first').appendTo('ol:first');//cambiamos de posicion el elemento del li.
+                   //  $('ol:first').append($('ol li:first'));//con append agregamos al final.
+
+                 //  $('ol li:last').prependTo('ol:first');//al inicio de la lista
+                 //   $('ol li:first').insertAfter('#e1');
+                   //  $('#e1').after($('ol li:first')); //primero el destino y luego cual vamos a pasar.
+                    //$('#e1').before($('ol li:first')); 
+                    // var clon = $('ol li:first').clone();
+                  //  $('#e1').before(clon);             
+                 //    var nuevo_e=$('<p>Hola mundo</p>');
+                   //  $('#e1').append(nuevo_e);
+                   $('ol li:last').remove();
+                });
+           });
+       </script>
+       <style>
+          body{
+             background: #000;
+             color: #fff;
+             margin: 0;
+             padding: 0;
+          }
+          header{
+          	 display: block;
+          	 margin: 0 auto 50px auto;
+          	 width: 365px;
+          }
+          ol{
+          	display: block;
+          	margin: 0 auto;
+          	width: 500px;
+          }
+          ol li{
+          	background: blue;
+          	height: 30px;
+          	margin: 5px auto;
+          	width: 100%;
+          }
+          button{
+          	display: block;
+          	margin: 0 auto;
+          	width: 80px;
+          }
+          div{
+          	background: #fe2e64;
+          	display: block;
+          	height: 50px;
+          	margin: 2px auto;
+          	width: 400px;
+          }
+       </style>
+    </head>
+     <body>
+           <header>
+               <img src="naruto.jpg">
+           </header>
+
+           <ol>
+           	  <li>Elemento 1</li>
+           	  <li>Elemento 2</li>
+           	  <li>Elemento 3</li>
+           	  <li>Elemento 4</li>
+           </ol>
+
+           <button id="test">Ejecutar</button>
+
+           <div id="e1">
+              <p>Div 1</p>
+           </div>
+
+           <div>
+              <p>Div 2</p>
+           </div>
+     </body>
+</html>

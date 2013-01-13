@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title> Objetos en javascript</title>
+   </head>
+    <body>
+	    <script type="text/javascript">
+		      var Gato = new  gato("Andrey");
+			  
+			  function gato(nombre){
+			     this.nombre = nombre;
+				 this.llora = function(){
+				    alert(this.nombre+" miauuuuuu...");
+				 }
+			  }
+			  alert("El gato se llama "+Gato.nombre);
+			  Gato.llora();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+      <title> Primeros Pasos en jQuery </title>
+	   <meta charset="utf-8"/>
+	   <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	   
+	   <script>
+	       $(document).on('ready',function(){
+		      $('#prueba').text('<p>Hola Mundo!</p>');
+			  $('.prueba').html('<strong>Estoy Usando jQuery</strong>');
+			   
+		   });
+	   </script>
+   </head>
+    <body>
+	    <div id="prueba"> </div>
+		<div class="prueba"></div>
+	</body>
+</html>
